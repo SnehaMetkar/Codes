@@ -1,0 +1,59 @@
+<!Doctype html>
+<html>
+    <head>
+  
+    </head>
+    <body>
+        <div id="Calculator">
+            <table border="">
+                <tr>
+                    <td>
+                            <textArea id="DisplayText" ></textArea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                            <input type="button" id="one" value="1" onclick="DisplayText.value +='1'"></input>
+                            <input type="button" value="2" onclick="DisplayText.value +='2'"></input>
+                            <input type="button" value="3" onclick="DisplayText.value+='3'"></input>                            
+                            <input type="button" value="/" onclick="DisplayText.value +='/' "></input>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                            <input type="button" value="4" onclick="DisplayText.value +='4'"></input>
+                            <input type="button" value="5" onclick="DisplayText.value+='5'"></input>
+                            <input type="button" value="6" onclick="DisplayText.value+='6'"></input>                            
+                            <input type="button" value="*" onclick="DisplayText.value +='*' "></input>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                            <input type="button" value="7" onclick="DisplayText.value+='7'"></input>
+                            <input type="button" value="8" onclick="DisplayText.value+='8'"></input>
+                            <input type="button" value="9" onclick="DisplayText.value+='9'"></input>                            
+                            <input type="button" value="+" onclick="DisplayText.value +='+' "></input>
+                    </td>
+                </tr>
+                <tr>
+                        <td>
+                                <input type="button" value="C" onclick="DisplayText.value=''"></input>
+                                <input type="button" value="0" onclick="DisplayText.value+='0'"></input>
+                                <input type="button" value="-" onclick="DisplayText.value +='-' "></input>                            
+                                <input type="button" value="=" onclick="Evaluate(DisplayText.value)"></input>
+                        </td>
+                    </tr>
+            </table>
+           
+        </div>
+        <script>        
+        function Evaluate(text)
+        {
+                DisplayText.value=eval(text);
+        
+                //DisplayText.value=num;
+        }
+    </script> 
+    </body>
+   
+</html>
